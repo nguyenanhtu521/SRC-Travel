@@ -10,7 +10,7 @@ using SRC_Travel.Models;
 
 namespace SRC_Travel.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("Api/[Controller]/[Action]")]
     [ApiController]
     public class TicketCountersController : ControllerBase
     {
@@ -29,11 +29,12 @@ namespace SRC_Travel.Controllers
           {
               return NotFound();
           }
-            return await _context.TicketCounters.ToListAsync();
+            return await _context.TicketCounters.Where(c => c.Flag != "d").ToListAsync();
         }
 
         // GET: api/TicketCounters/5
-        [HttpGet("{id}")]
+        [HttpGet]
+        [Route("{id}")]
         public async Task<ActionResult<TicketCounter>> GetTicketCounter(int id)
         {
           if (_context.TicketCounters == null)
@@ -52,8 +53,9 @@ namespace SRC_Travel.Controllers
 
         // PUT: api/TicketCounters/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutTicketCounter(int id, TicketCounter ticketCounter)
+        [HttpPut]
+        [Route("{id}")]
+        public async Task<ActionResult<TicketCounter>> PutTicketCounter(int id, TicketCounter ticketCounter)
         {
             if (id != ticketCounter.TicketCounterID)
             {
@@ -78,8 +80,17 @@ namespace SRC_Travel.Controllers
                 }
             }
 
-            return NoContent();
+            // Tìm lại dữ liệu đã cập nhật và trả về nó
+            var updatedTicketCounter = await _context.TicketCounters.FindAsync(id);
+
+            if (updatedTicketCounter == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(updatedTicketCounter);
         }
+
 
         // POST: api/TicketCounters
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
@@ -97,7 +108,8 @@ namespace SRC_Travel.Controllers
         }
 
         // DELETE: api/TicketCounters/5
-        [HttpDelete("{id}")]
+        [HttpDelete]
+        [Route("{id}")]
         public async Task<IActionResult> DeleteTicketCounter(int id)
         {
             if (_context.TicketCounters == null)
