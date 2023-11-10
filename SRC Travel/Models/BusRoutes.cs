@@ -10,6 +10,6 @@ namespace SRC_Travel.Models
         public string? Description { get; set;}
         public DateTime? CreateAt { get; set; } = DateTime.Now;
         public DateTime? ModifiedAt { get; set; }
-        public string? Flag { get; set; }
+      
     }
 }

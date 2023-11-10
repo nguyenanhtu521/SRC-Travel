@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace SRC_Travel.Migrations
 {
     /// <inheritdoc />
-    public partial class V0 : Migration
+    public partial class V1 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -19,10 +19,9 @@ namespace SRC_Travel.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     AgeGroupName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Benefit = table.Column<double>(type: "float", nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CreateAt = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    ModifiedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Flag = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CreateAt = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    ModifiedAt = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -38,8 +37,7 @@ namespace SRC_Travel.Migrations
                     BusRoutesName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     CreateAt = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    ModifiedAt = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    Flag = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    ModifiedAt = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -56,8 +54,7 @@ namespace SRC_Travel.Migrations
                     Price = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     CreateAt = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    ModifiedAt = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    Flag = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    ModifiedAt = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -74,8 +71,7 @@ namespace SRC_Travel.Migrations
                     Location = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     CreateAt = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    ModifiedAt = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    Flag = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    ModifiedAt = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -95,8 +91,7 @@ namespace SRC_Travel.Migrations
                     AgeGroupID = table.Column<int>(type: "int", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     CreateAt = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    ModifiedAt = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    Flag = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    ModifiedAt = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -122,14 +117,14 @@ namespace SRC_Travel.Migrations
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     CreateAt = table.Column<DateTime>(type: "datetime2", nullable: true),
                     ModifiedAt = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    Flag = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    BusRoutesBusRouteID = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_RouteDetails", x => x.RouteDetailID);
                     table.ForeignKey(
-                        name: "FK_RouteDetails_BusRoutes_BusRouteID",
-                        column: x => x.BusRouteID,
+                        name: "FK_RouteDetails_BusRoutes_BusRoutesBusRouteID",
+                        column: x => x.BusRoutesBusRouteID,
                         principalTable: "BusRoutes",
                         principalColumn: "BusRouteID");
                 });
@@ -149,14 +144,14 @@ namespace SRC_Travel.Migrations
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     CreateAt = table.Column<DateTime>(type: "datetime2", nullable: true),
                     ModifiedAt = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    Flag = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    BusRoutesBusRouteID = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Buses", x => x.BusID);
                     table.ForeignKey(
-                        name: "FK_Buses_BusRoutes_BusRouteID",
-                        column: x => x.BusRouteID,
+                        name: "FK_Buses_BusRoutes_BusRoutesBusRouteID",
+                        column: x => x.BusRoutesBusRouteID,
                         principalTable: "BusRoutes",
                         principalColumn: "BusRouteID");
                     table.ForeignKey(
@@ -181,12 +176,10 @@ namespace SRC_Travel.Migrations
                     Phone = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Address = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Qualification = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Role = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     TicketCounterID = table.Column<int>(type: "int", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     CreateAt = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    ModifiedAt = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    Flag = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    ModifiedAt = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -217,14 +210,14 @@ namespace SRC_Travel.Migrations
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     CreateAt = table.Column<DateTime>(type: "datetime2", nullable: true),
                     ModifiedAt = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    Flag = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    BusesBusID = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Tickets", x => x.TicketID);
                     table.ForeignKey(
-                        name: "FK_Tickets_Buses_BusID",
-                        column: x => x.BusID,
+                        name: "FK_Tickets_Buses_BusesBusID",
+                        column: x => x.BusesBusID,
                         principalTable: "Buses",
                         principalColumn: "BusID");
                     table.ForeignKey(
@@ -244,7 +237,7 @@ namespace SRC_Travel.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_Buses_BusRoutesBusRouteID",
                 table: "Buses",
-                column: "BusRouteID");
+                column: "BusRoutesBusRouteID");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Buses_BusTypeID",
@@ -259,12 +252,12 @@ namespace SRC_Travel.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_RouteDetails_BusRoutesBusRouteID",
                 table: "RouteDetails",
-                column: "BusRouteID");
+                column: "BusRoutesBusRouteID");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Tickets_BusesBusID",
                 table: "Tickets",
-                column: "BusID");
+                column: "BusesBusID");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Tickets_CustomerID",

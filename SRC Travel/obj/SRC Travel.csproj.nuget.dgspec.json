@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Workspace\\Project 3\\Source\\Backend\\Api\\SRC Travel\\SRC Travel\\SRC Travel.csproj": {}
+    "C:\\Project3\\SRC-Travel\\SRC Travel\\SRC Travel.csproj": {}
   },
   "projects": {
-    "D:\\Workspace\\Project 3\\Source\\Backend\\Api\\SRC Travel\\SRC Travel\\SRC Travel.csproj": {
+    "C:\\Project3\\SRC-Travel\\SRC Travel\\SRC Travel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Workspace\\Project 3\\Source\\Backend\\Api\\SRC Travel\\SRC Travel\\SRC Travel.csproj",
+        "projectUniqueName": "C:\\Project3\\SRC-Travel\\SRC Travel\\SRC Travel.csproj",
         "projectName": "SRC Travel",
-        "projectPath": "D:\\Workspace\\Project 3\\Source\\Backend\\Api\\SRC Travel\\SRC Travel\\SRC Travel.csproj",
-        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "D:\\Workspace\\Project 3\\Source\\Backend\\Api\\SRC Travel\\SRC Travel\\obj\\",
+        "projectPath": "C:\\Project3\\SRC-Travel\\SRC Travel\\SRC Travel.csproj",
+        "packagesPath": "C:\\Users\\toan1\\.nuget\\packages\\",
+        "outputPath": "C:\\Project3\\SRC-Travel\\SRC Travel\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\toan1\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,8 +22,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://jfrog.zozoteam.dev/artifactory/api/nuget/v3/blazor-virtual-nuget": {}
         },
         "frameworks": {
           "net6.0": {
@@ -83,7 +83,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

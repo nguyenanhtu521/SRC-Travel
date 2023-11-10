@@ -19,7 +19,7 @@ namespace SRC_Travel.Models
         public string? Description { get; set; }
         public DateTime? CreateAt { get; set; } = DateTime.Now;
         public DateTime? ModifiedAt { get; set; }
-        public string? Flag { get; set; }
+        
         public virtual BusType? BusType { get; set; }
         public virtual BusRoutes? BusRoutes { get; set; }
     }

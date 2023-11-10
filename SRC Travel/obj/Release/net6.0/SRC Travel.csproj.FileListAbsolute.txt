@@ -267,3 +267,15 @@ D:\Workspace\Project 3\Source\Backend\Api\SRC Travel\SRC Travel\obj\Release\net6
 D:\Workspace\Project 3\Source\Backend\Api\SRC Travel\SRC Travel\obj\Release\net6.0\SRC Travel.pdb
 D:\Workspace\Project 3\Source\Backend\Api\SRC Travel\SRC Travel\obj\Release\net6.0\SRC Travel.genruntimeconfig.cache
 D:\Workspace\Project 3\Source\Backend\Api\SRC Travel\SRC Travel\obj\Release\net6.0\ref\SRC Travel.dll
+C:\Project3\SRC-Travel\SRC Travel\obj\Release\net6.0\SRC Travel.csproj.AssemblyReference.cache
+C:\Project3\SRC-Travel\SRC Travel\obj\Release\net6.0\SRC Travel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Project3\SRC-Travel\SRC Travel\obj\Release\net6.0\SRC Travel.AssemblyInfoInputs.cache
+C:\Project3\SRC-Travel\SRC Travel\obj\Release\net6.0\SRC Travel.AssemblyInfo.cs
+C:\Project3\SRC-Travel\SRC Travel\obj\Release\net6.0\SRC Travel.csproj.CoreCompileInputs.cache
+C:\Project3\SRC-Travel\SRC Travel\obj\Release\net6.0\SRC Travel.MvcApplicationPartsAssemblyInfo.cs
+C:\Project3\SRC-Travel\SRC Travel\obj\Release\net6.0\SRC Travel.MvcApplicationPartsAssemblyInfo.cache
+C:\Project3\SRC-Travel\SRC Travel\obj\Release\net6.0\SRC Travel.RazorAssemblyInfo.cache
+C:\Project3\SRC-Travel\SRC Travel\obj\Release\net6.0\SRC Travel.RazorAssemblyInfo.cs
+C:\Project3\SRC-Travel\SRC Travel\obj\Release\net6.0\SRC Travel.dll
+C:\Project3\SRC-Travel\SRC Travel\obj\Release\net6.0\refint\SRC Travel.dll
+C:\Project3\SRC-Travel\SRC Travel\obj\Release\net6.0\SRC Travel.pdb

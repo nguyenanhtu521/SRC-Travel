@@ -29,7 +29,7 @@ namespace SRC_Travel.Controllers
           {
               return NotFound();
           }
-            return await _context.TicketCounters.Where(c => c.Flag != "d").ToListAsync();
+            return await _context.TicketCounters.ToListAsync();
         }
 
         // GET: api/TicketCounters/5

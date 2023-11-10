@@ -16,15 +16,12 @@ namespace SRC_Travel.Models
         public string Email { get; set; }
         public string Phone { get; set; }
         public string Address { get; set; }
-        public string Qualification { get; set; }
-        public string Role { get; set; }
+        public string Qualification { get; set; }       
         [ForeignKey(nameof(TicketCounterID))]
         public int TicketCounterID { get; set; }
         public string? Description { get; set; }
         public DateTime? CreateAt { get; set; } = DateTime.Now;
-        public DateTime? ModifiedAt { get; set; }
-        public string? Flag { get; set; }
-
+        public DateTime? ModifiedAt { get; set; }        
         public virtual TicketCounter? TicketCounter { get; set; }
     }
 }
